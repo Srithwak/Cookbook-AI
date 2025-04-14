@@ -47,7 +47,12 @@ npm install
 pip install google-generativeai
 ```
 
-4. Start the application
+4. Add your API key from Gemini
+```
+touch API_KEY.txt
+```
+
+5. Start the application
 ```
 npm start
 ```
