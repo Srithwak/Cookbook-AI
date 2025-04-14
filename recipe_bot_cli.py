@@ -1,6 +1,12 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyCO3YkbCrs6oNtQ3r1H35yXSLszxPqyx6g")
+try:
+    with open("API_KEY.txt", "r") as f:
+        api_key = f.readline().strip()
+except FileNotFoundError:
+    print("Error: API_KEY.txt not found. Please create this file and store your API key in it.")
+    exit()
+genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel('gemini-2.0-flash-lite')
 

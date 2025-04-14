@@ -12,8 +12,10 @@ def main():
     cuisine = sys.argv[4]
     
     try:
-        genai.configure(api_key="AIzaSyCO3YkbCrs6oNtQ3r1H35yXSLszxPqyx6g")
+        with open("API_KEY.txt", "r") as f:
+            api_key = f.readline().strip()
         model = genai.GenerativeModel('gemini-2.0-flash-lite')
+        genai.configure(api_key=api_key)
         
         prompt = f"Generate a recipe"
         if dish_name:
