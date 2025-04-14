@@ -1,5 +1,5 @@
 {
-  "name": "Cookbook-AI",
+  "name": "cookbook-ai",
   "version": "1.0.0",
   "description": "Recipe Generator using Gemini API",
   "main": "main.js",
