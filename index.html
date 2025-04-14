@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🍽️ Recipe Generator</h1>
+    
+    <div class="input-container">
+      <div class="form-group">
+        <label for="ingredients">Ingredients <small>(comma-separated)</small>:</label>
+        <textarea id="ingredients" rows="4" placeholder="e.g., chicken, rice, onions, garlic"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="meal-type">Meal Type:</label>
+          <select id="meal-type">
+            <option value="any">Any</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="cuisine">Cuisine:</label>
+          <select id="cuisine">
+            <option value="any">Any</option>
+            <option value="italian">Italian</option>
+            <option value="mexican">Mexican</option>
+            <option value="indian">Indian</option>
+            <option value="chinese">Chinese</option>
+            <option value="japanese">Japanese</option>
+            <option value="thai">Thai</option>
+            <option value="french">French</option>
+            <option value="mediterranean">Mediterranean</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dish-name">Specific Dish <small>(optional)</small>:</label>
+        <input type="text" id="dish-name" placeholder="e.g., lasagna, curry, stir-fry">
+      </div>
+
+      <button id="generate-btn">🍳 Generate Recipe</button>
+    </div>
+    
+    <div class="result-container">
+      <div class="loading" id="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Generating your recipe...</p>
+      </div>
+      <div id="recipe-result"></div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
