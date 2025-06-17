@@ -33,7 +33,7 @@ This cross-platform desktop application combines the power of Google's Gemini AI
 ### Setup
 1. Clone the repository
 ```
-git clone https://github.com/yourusername/recipe-generator.git
+git clone https://github.com/srithwak/recipe-generator.git
 cd recipe-generator
 ```
 
